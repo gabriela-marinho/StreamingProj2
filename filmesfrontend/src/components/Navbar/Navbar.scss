@@ -1,5 +1,24 @@
-.navbar{
-    &__logo{
-        
+.navbar {
+    background-color: #bf930d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  
+    &__logo {
+      color: #ffffff;
+      font-size: 1.8em;
     }
+  
+    &__links {
+      display: flex;
+  
+      &__items {
+        color: #ffffff;
+        text-decoration: none;
+        list-style: none;
+        margin: 0 0.4rem;
+        padding: 1rem 0.2rem;
+      }
+}
 }

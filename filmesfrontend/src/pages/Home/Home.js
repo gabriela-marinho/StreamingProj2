@@ -6,22 +6,23 @@ import Card from '../../components/Card/Card';
 import axios from 'axios';
 export default function Home(){
 
-    const [filmes, setFilmes] = useState([]);
-    const [feito, setFeito] = useState(false);
-    
-    const getFilmes = async () => {
-       await axios.get('/movie/findMany')
-       .then(response => {
-          if(feito){
-            setFilmes(response.data);
-
-          }
-       })
-    }
+   const [filmes, setFilmes] = useState([]);
+   const [feito, setFeito] = useState(false);
     useEffect(() => {
+      
+      
+      const getFilmes = async () => {
+         await axios.get('/movie/findMany')
+         .then(response => {
+            if(feito){
+              setFilmes(response.data);
+  
+            }
+         })
+      }
        setFeito(true)
        getFilmes()
-    },[feito])
+    },[(feito)])
 
     return(
         <div className= 'home'>

@@ -37,12 +37,10 @@ export default function Home(){
                 {
                    filmes.map(item =>(
                      <Card
+                        id={item.id}
                         image={item.cover}
-                        ano={item.year}
-                        genero={item.genres}
-                        name={item.title}
-                        resumo={item.resume}
-                        elenco={item.cast}
+                        key={item.id}
+                        
 
                    />
                    ))
